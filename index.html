@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iChat</title>
+    <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script defer src="js/client.js"></script>
+</head>
+<style>
+    /* body{
+        background-image: linear-gradient(white,purple);
+    } */
+    .main{
+        display: block;
+        width:400px;
+        margin: auto;
+        border: 5px solid black;
+        border-radius: 30px;
+        
+    }
+    nav{
+        display: inline-flex;
+    }
+    .heading{
+        margin-top: 33px;
+    }
+.logo{
+    display: inline;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+}
+.container{
+    max-width: 755px;
+    /* border: 2px solid black; */
+    padding: 33px;
+    margin: auto;
+    height: 60vh;
+    overflow-y:auto ;
+    margin-bottom:10px ;
+}
+
+.left{
+float: left;
+clear: both;
+}
+.right{
+float: right;
+clear: both;
+}
+#send-container{
+    display: block;
+    margin: 10px;
+    text-align: center;
+    max-width: 800px;
+}
+#msgInp{
+    width:80%;
+    border: 2px solid black;
+    height: 30px;
+    border-radius: 10px;
+}
+#sendbtn{
+    border: 2px solid black;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+</style>
+<body>
+    <div class="main">
+        <nav>
+            <img class="logo" src="chat.png" alt="">
+            <h1 class="heading">iChat</h1>
+        </nav>
+        <hr>
+        <div class="container">
+            <!-- <div class="msg right"></div>
+            <div class="msg left"></div> -->
+        </div>
+        <hr>
+        <div class="send">
+            <form action="" id="send-container">
+                <input type="text" name="msgInp" id="msgInp">
+                <button type="submit" id="sendbtn">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
